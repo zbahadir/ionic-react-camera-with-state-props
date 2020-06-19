@@ -1,0 +1,23 @@
+https://medium.com/enappd/camera-and-photo-gallery-in-ionic-react-app-using-capacitor-ca203d013d0e
+
+npm install @ionic/pwa-elements
+npm install @ionic/react-hooks --save
+
+    if (isPlatform('hybrid')) {
+      console.log('Hibrid: ', image);
+      // base64Data = image.base64String;
+      /*
+      base64String: "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAw"
+      exif: {FNumber: "1.5", DateTime: "2020:06:19 13:58:59", ExposureTime: "0.1", Flash: "0", FocalLength: "430/100", …}
+      format: "jpeg"
+      */
+     // this.setState({ photo: image.webPath })
+    } else {
+        console.log('Web: ', image);
+        this.setState({ photo: image.webPath })
+        /*
+        format: "png"
+        webPath: "blob:http://localhost:8100/77ee2e83-9579-421c-a852-117c7c9381df"
+        */
+    }
+    
